@@ -1,6 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://bre1u0x3xw8pq"]
+[gd_scene load_steps=3 format=3 uid="uid://bre1u0x3xw8pq"]
 
 [ext_resource type="Script" uid="uid://dtw6lfu0dp11d" path="res://scenes/Game.cs" id="1_78awf"]
+[ext_resource type="PackedScene" uid="uid://cbykpdq0in453" path="res://scenes/Ship.tscn" id="2_qbsmt"]
 
 [node name="Game" type="Node3D"]
 script = ExtResource("1_78awf")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 7.782959)
+
+[node name="Ship" parent="." instance=ExtResource("2_qbsmt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.980546, 0.040405273, 1.1330566)
