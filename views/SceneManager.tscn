@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://b6lb7wn47u5ia"]
+
+[ext_resource type="Script" uid="uid://dlm8bwme4f7bg" path="res://scripts/managers/SceneManager.cs" id="1_12uft"]
+[ext_resource type="PackedScene" path="res://views/LoadingScene.tscn" id="2_ckhlm"]
+
+[node name="SceneManager" type="Node3D"]
+script = ExtResource("1_12uft")
+
+[node name="LoadingScene" parent="." instance=ExtResource("2_ckhlm")]
+unique_name_in_owner = true
+script = null

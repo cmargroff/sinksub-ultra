@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="BiomeResource" load_steps=2 format=3 uid="uid://c71tisl3q01fj"]
+
+[ext_resource type="Script" uid="uid://dqn71vli2ld2h" path="res://scripts/resources/BiomeResource.cs" id="1_4b855"]
+
+[resource]
+script = ExtResource("1_4b855")
+metadata/_custom_type_script = "uid://dqn71vli2ld2h"
