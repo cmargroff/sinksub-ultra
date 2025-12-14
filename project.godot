@@ -27,6 +27,17 @@ initial_scene="Game"
 
 project/assembly_name="sinksub ultra"
 
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/physics_layers_enum/plugin.cfg")
+
+[layer_names]
+
+3d_physics/layer_1="PlayerHurtbox"
+3d_physics/layer_2="PlayerHitbox"
+3d_physics/layer_3="EnemyHurtbox"
+3d_physics/layer_4="EnemyHitbox"
+
 [physics]
 
 3d/physics_engine="Jolt Physics"
