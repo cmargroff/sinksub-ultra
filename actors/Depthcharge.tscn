@@ -1,4 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://chmdj3dpoamyo"]
+[gd_scene load_steps=4 format=3 uid="uid://chmdj3dpoamyo"]
+
+[ext_resource type="Script" uid="uid://fj6l2iyj7hom" path="res://scripts/components/Mover.cs" id="1_8ovet"]
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_xeimd"]
 top_radius = 0.2
@@ -19,3 +21,7 @@ skeleton = NodePath("../Area3D")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
 shape = SubResource("CylinderShape3D_y2je7")
+
+[node name="Mover" type="Node" parent="."]
+script = ExtResource("1_8ovet")
+metadata/_custom_type_script = "uid://fj6l2iyj7hom"

@@ -2,24 +2,25 @@
 
 [ext_resource type="Script" uid="uid://fj6l2iyj7hom" path="res://scripts/components/Mover.cs" id="1_ai6ab"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_muwsp"]
-size = Vector3(4, 1, 1)
-
 [sub_resource type="BoxMesh" id="BoxMesh_ai6ab"]
 size = Vector3(4, 1, 1)
 
-[node name="Ship" type="Area3D"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_muwsp"]
+size = Vector3(4, 1, 1)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
-shape = SubResource("BoxShape3D_muwsp")
+[node name="Ship" type="Node3D"]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
 mesh = SubResource("BoxMesh_ai6ab")
 skeleton = NodePath("")
 
-[node name="Mover" type="Node3D" parent="."]
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+shape = SubResource("BoxShape3D_muwsp")
+
+[node name="Mover" type="Node" parent="."]
 script = ExtResource("1_ai6ab")
-SpeedX = 10.0
 metadata/_custom_type_script = "uid://fj6l2iyj7hom"

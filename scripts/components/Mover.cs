@@ -1,7 +1,7 @@
 using Godot;
 
 [GlobalClass]
-public partial class Mover : Node3D
+public partial class Mover : Node
 {
   private float _speedX;
   [Export]

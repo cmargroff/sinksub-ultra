@@ -1,4 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://cap5cy0n8kg5d"]
+[gd_scene load_steps=4 format=3 uid="uid://cap5cy0n8kg5d"]
+
+[ext_resource type="Script" uid="uid://fj6l2iyj7hom" path="res://scripts/components/Mover.cs" id="1_w4f5f"]
 
 [sub_resource type="SphereMesh" id="SphereMesh_3v6aa"]
 radius = 0.2
@@ -19,3 +21,7 @@ skeleton = NodePath("../Area3D")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0)
 shape = SubResource("SphereShape3D_rrkvo")
+
+[node name="Mover" type="Node" parent="."]
+script = ExtResource("1_w4f5f")
+metadata/_custom_type_script = "uid://fj6l2iyj7hom"
