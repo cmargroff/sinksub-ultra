@@ -1,21 +1,51 @@
 using Godot;
-using System;
 
 [GlobalClass]
 public partial class Mover : Node3D
 {
-    [Export] public float SpeedX;
-    [Export] public float SpeedY;
-    private Area3D _target;
-
-    public override void _EnterTree()
+  private float _speedX;
+  [Export]
+  public float SpeedX
+  {
+    get => _speedX; set
     {
-        _target = GetParent<Area3D>();
+      _speedX = value;
+      UpdateVelocity();
     }
-
-    public override void _Process(double delta)
+  }
+  private float _speedY;
+  [Export]
+  public float SpeedY
+  {
+    get => _speedY; set
     {
-        _target.GlobalPosition += new Vector3(SpeedX, SpeedY, 0) * (float)delta; 
+      _speedY = value;
+      UpdateVelocity();
     }
+  }
+  private Node3D _target;
+  private Vector3 _velocity;
+  public override void _EnterTree()
+  {
+    _target = GetParent<Node3D>();
+  }
 
+  private void UpdateVelocity()
+  {
+    _velocity = new Vector3(SpeedX, SpeedY, 0) * (1f / Engine.PhysicsTicksPerSecond);
+  }
+
+  public override void _PhysicsProcess(double delta)
+  {
+    _target.GlobalPosition += _velocity;
+  }
+
+  public void FlipX()
+  {
+    SpeedX = -SpeedX;
+  }
+  public void FlipY()
+  {
+    SpeedY = -SpeedY;
+  }
 }
