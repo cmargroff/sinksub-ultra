@@ -1,6 +1,6 @@
 using Godot;
 
-namespace Morpheus.Views;
+namespace SinkSub.Views;
 
 public partial class LoadingScene : Control
 {
