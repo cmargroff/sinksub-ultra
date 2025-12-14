@@ -24,4 +24,5 @@ shape = SubResource("SphereShape3D_rrkvo")
 
 [node name="Mover" type="Node" parent="."]
 script = ExtResource("1_w4f5f")
+SpeedY = 1.0
 metadata/_custom_type_script = "uid://fj6l2iyj7hom"
