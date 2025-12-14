@@ -7,12 +7,15 @@ height = 0.4
 [sub_resource type="SphereShape3D" id="SphereShape3D_rrkvo"]
 radius = 0.2
 
-[node name="Mine" type="Area3D"]
+[node name="Mine" type="Node3D"]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0)
 mesh = SubResource("SphereMesh_3v6aa")
+skeleton = NodePath("../Area3D")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0)
 shape = SubResource("SphereShape3D_rrkvo")
