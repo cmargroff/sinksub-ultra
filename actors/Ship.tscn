@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://cbykpdq0in453"]
+[gd_scene load_steps=7 format=3 uid="uid://cbykpdq0in453"]
 
 [ext_resource type="Script" uid="uid://fj6l2iyj7hom" path="res://scripts/components/Mover.cs" id="1_ai6ab"]
+[ext_resource type="Script" uid="uid://qvrqjl43gq4u" path="res://scripts/actors/Ship.cs" id="1_ov2fs"]
 [ext_resource type="Script" uid="uid://gj4jjnwmebsp" path="res://scripts/components/Damageable.cs" id="2_337td"]
 [ext_resource type="Script" uid="uid://cbmd82pwa4vga" path="res://scripts/components/Hurtbox.cs" id="3_ov2fs"]
 
@@ -11,6 +12,7 @@ size = Vector3(4, 1, 1)
 size = Vector3(4, 1, 1)
 
 [node name="Ship" type="Node3D"]
+script = ExtResource("1_ov2fs")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)

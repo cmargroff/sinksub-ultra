@@ -7,7 +7,8 @@ public partial class Mover : Node
   [Export]
   public float SpeedX
   {
-    get => _speedX; set
+    get => _speedX;
+    set
     {
       _speedX = value;
       UpdateVelocity();
@@ -17,7 +18,8 @@ public partial class Mover : Node
   [Export]
   public float SpeedY
   {
-    get => _speedY; set
+    get => _speedY;
+    set
     {
       _speedY = value;
       UpdateVelocity();
