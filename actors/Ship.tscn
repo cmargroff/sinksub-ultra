@@ -23,6 +23,7 @@ mesh = SubResource("BoxMesh_ai6ab")
 skeleton = NodePath("")
 
 [node name="Mover" type="Node" parent="."]
+unique_name_in_owner = true
 script = ExtResource("1_ai6ab")
 metadata/_custom_type_script = "uid://fj6l2iyj7hom"
 
@@ -39,9 +40,19 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
 shape = SubResource("BoxShape3D_muwsp")
 
 [node name="LauncherStern" type="Marker3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0.4, 0)
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0.5, 0)
 
 [node name="LauncherBow" type="Marker3D" parent="."]
+unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0000002, 0.5, 0)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+
+[node name="SensorLeft" type="Marker3D" parent="."]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 0.5, 0)
+
+[node name="SensorRight" type="Marker3D" parent="."]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 0.5, 0)
